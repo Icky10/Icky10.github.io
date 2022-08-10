@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.Header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 70px;
+    padding: 10px;
+    text-align: center;
+}
+.Header a{
+    color: beige;
+    text-decoration: none;
+    background-color: grey;
+    border:solid;
+}
+.Header a:not(:nth-last-child(-n+2)):hover {
+    background-color: green;
+}
+.icon {
+    display: none;
+    background-color: black;
+    margin-top: auto;
+    margin-bottom: auto
+}
+/*--------------------------------*/
+/*Styling for Index*/
+.IndexBody{
+    background-image:url("../Images/Golf.png");
+    background-repeat: repeat-y;
+    background-position:center;
+    background-size:cover;
+    width:100%;
+}
+.AboutGolf {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    color: beige;
+    background: hsl(0, 0%, 50%, .8);
+}
+.AboutGolf h2{font-size:50px;}
+.AboutGolf p{font-size:15px;}
+.Video {
+    max-width:600px;
+    margin:auto;
+    width: 100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    gap:5px;
+}
+/*-------------------------------------*/
+/*Styling for History*/
+.HistoryBody {
+    background-image: url("../Images/oldGolf.jpg");
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+}
+.HistoryContent {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    background: hsl(0, 0%, 50%, .8);
+    margin: 10px;
+    padding: 10px;
+    text-align:center;
+    color:beige
+}
+.history1 {
+    grid-row: 1;
+    grid-column: 2/ span 2;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.history2 {
+    grid-row: 2;
+    grid-column: 2/span 2;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+/*--------------------------------------------*/
+/*Styling for Equipment*/
+.EquipmentBody {
+    background-image: url("../Images/GolfGreen.jpg");
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+/*--------------------------------------------*/
+/*Responsive styling*/
+@media screen and (max-width:1920px) {
+    .Title {
+        grid-row: 1;
+        grid-column: 1/span 2;
+        color: beige;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .Header {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 50px 50px;
+    }
+
+    .homeTag {
+        grid-column: 1/span 2;
+    }
+
+    .historyTag {
+        grid-column: 1/span 2;
+    }
+    .historyTag2 {
+        grid-column: 3/span 2;
+    }
+
+    .equipmentTag {
+        grid-column: 3/span 2;
+    }
+    .equipmentTag2 {
+        grid-row: 2;
+        grid-column: 1/span 4;
+    }
+
+    .exampleTag {
+        grid-row: 2;
+        grid-column: 1/span 4;
+    }
+
+    .Title {
+        display:none;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .Header a:not(:nth-last-child(-n+2)){display:none}
+
+    .Header a.icon{
+        float:left;
+        display:block;
+    }
+
+    .icon{
+        grid-row:1;
+        grid-column:4;
+    }
+
+    .Title {
+        display:block;
+        grid-row: 1;
+        grid-column: 1/span 3;
+        margin-top: auto;
+        margin-bottom: auto;
+        color:beige;
+        background-color: grey;
+        font-size: 40px;
+    }
+    .Header {
+        grid-template-rows: 50px;
+    }
+    .historyTag {
+        grid-row: 2;
+        grid-column: 1/span 4;
+    }
+    .historyTag2 {
+        grid-row: 3;
+        grid-column: 1/span 4;
+    }
+
+    .homeTag {
+        grid-row: 2;
+        grid-column: 1/span 4;
+    }
+
+    .equipmentTag {
+        grid-row: 3;
+        grid-column: 1/span 4;
+    }
+    .equipmentTag2 {
+        grid-row: 4;
+        grid-column: 1/span 4;
+    }
+
+    .exampleTag {
+        grid-row: 4;
+        grid-column: 1/span 4;
+    }
+
+    .Header.responsive {
+        position: relative;
+    }
+
+    .Header.responsive a {
+        float: none;
+        display: block;
+        grid-template-rows: 50px repeat(3, 70px);
+    }
+}
