@@ -29,3 +29,24 @@ for (let i = 0; i < Img.length; ++i) {
     }
 }
 
+const clubs = document.querySelectorAll("a.Clubs")
+const course = document.querySelectorAll("img.MinigameImg")
+for (let i = 0; i < course.length; ++i) {
+    clubs[i].addEventListener("click", Activate)
+    function Activate() {
+        clubs[i + 1].classList.remove("Deactive");
+        clubs[i].classList.add("Deactive");
+        course[i + 1].classList.remove("Deactive");
+        course[i].classList.add("Deactive");
+    }
+}
+
+clubs[4].addEventListener("click", Reset)
+function Reset() {
+    for(let i = 0; i < course.length; ++i) {
+        clubs[i].classList.add("Deactive");
+        course[i].classList.add("Deactive");
+    }
+    clubs[0].classList.remove("Deactive");
+    course[0].classList.remove("Deactive");
+}

@@ -31,6 +31,12 @@ body {
     margin-top: auto;
     margin-bottom: auto
 }
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 /*--------------------------------*/
 /*Styling for Index*/
 .IndexBody{
@@ -89,12 +95,6 @@ body {
     margin-top: auto;
     margin-bottom: auto;
 }
-.img-responsive {
-    max-width: 100%;
-    height: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-}
 /*--------------------------------------------*/
 /*Styling for Equipment*/
 .EquipmentBody {
@@ -122,6 +122,58 @@ body {
 .InfoActive{
     display:block;
     position:static;
+}
+/*--------------------------------------------*/
+/*Styling for Minigame*/
+.ExampleBody {
+    background-image: url("../Images/Sky.jpg");
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+.Minigame {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+.MinigameImg {
+    grid-column: 2;
+    grid-row: 1/span 4;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Clubs {
+    grid-column: 1;
+    grid-row: 1/span 4;
+    margin-left:auto;
+    margin-right:auto;
+}
+.Win {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
+#reset {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 15px;
+}
+.explanation {
+    grid-column: 3;
+    grid-row: 1/span4;
+    background: hsl(0, 0%, 50%, .8);
+    text-align: center;
+    color: beige;
+    font-size:20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border:solid;
 }
 .Deactive {
     display: none;
@@ -176,6 +228,12 @@ body {
         grid-template-rows: repeat(1,1fr);
     }
 
+    .Minigame {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .explanation{
+        display:none;
+    }
 }
 
 @media screen and (max-width:540px) {
