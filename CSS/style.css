@@ -170,6 +170,12 @@ body {
     .Title {
         display:none;
     }
+
+    .EquipmentContent {
+        grid-template-columns: repeat(5,1fr) 200px;
+        grid-template-rows: repeat(1,1fr);
+    }
+
 }
 
 @media screen and (max-width:540px) {
@@ -234,5 +240,10 @@ body {
         float: none;
         display: block;
         grid-template-rows: 50px repeat(3, 70px);
+    }
+
+    .EquipmentContent {
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(1,1fr);
     }
 }
