@@ -7,7 +7,9 @@ hambutton.addEventListener("click", () => {
     }
 });
 
-const cross = document.querySelectorAll("#cross")
+//Code for Equipment page
+//code for exit button
+const cross = document.querySelectorAll("a.Exit")
 for (let i = 0; i < cross.length; ++i) {
     cross[i].addEventListener("click", CloseInfo)
 }
@@ -17,6 +19,7 @@ function CloseInfo() {
     }
 }
 
+//Code to show equipment info
 const Img = document.querySelectorAll("a.Equipment");
 const Info = document.querySelectorAll("div.Info");
 for (let i = 0; i < Img.length; ++i) {
@@ -29,6 +32,7 @@ for (let i = 0; i < Img.length; ++i) {
     }
 }
 
+//Code for Minigame
 const clubs = document.querySelectorAll("a.Clubs")
 const course = document.querySelectorAll("img.MinigameImg")
 for (let i = 0; i < course.length; ++i) {
@@ -41,6 +45,7 @@ for (let i = 0; i < course.length; ++i) {
     }
 }
 
+//code to reset minigame
 clubs[4].addEventListener("click", Reset)
 function Reset() {
     for(let i = 0; i < course.length; ++i) {
