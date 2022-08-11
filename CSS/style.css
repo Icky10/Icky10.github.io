@@ -229,10 +229,18 @@ body {
     }
 
     .Minigame {
+        grid-template-rows: 60px repeat(4,1fr);
         grid-template-columns: repeat(2,1fr);
     }
+    .MinigameImg {
+        grid-row: 2/span 4;
+    }
+    .Clubs {
+        grid-row: 2/span 4;
+    }
     .explanation{
-        display:none;
+        grid-row:1;
+        grid-column:1/span2;
     }
 }
 
