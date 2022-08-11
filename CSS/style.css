@@ -74,8 +74,8 @@ body {
     background: hsl(0, 0%, 50%, .8);
     margin: 10px;
     padding: 10px;
-    text-align:center;
-    color:beige
+    text-align: center;
+    color: beige;
 }
 .history1 {
     grid-row: 1;
@@ -103,6 +103,28 @@ body {
     background-position: center;
     background-size: cover;
     width: 100%;
+}
+.EquipmentContent {
+    display: grid;
+    grid-template-columns: repeat(5,1fr) 450px;
+    grid-template-rows: repeat(1,1fr);
+    margin: 10px;
+    padding: 10px;
+}
+.Info {
+    grid-column: 1 /span 6;
+    grid-row: 1;
+    background: hsl(0, 0%, 50%, .8);
+    text-align: center;
+    color: beige;
+    display: none;
+}
+.InfoActive{
+    display:block;
+    position:static;
+}
+.Deactive {
+    display: none;
 }
 /*--------------------------------------------*/
 /*Responsive styling*/
